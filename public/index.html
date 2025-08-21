@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- 能够让IE浏览器以最大的性能渲染页面 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- 移动端打开视配视口 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- icon  <%= BASE_URL %>是webpack配置好的-->
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+  <!-- 页面title webpack配置好的，显示的是package.json中的"name": "vue_test", -->
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <!--
+      1. <%= BASE_URL %>是webpack配置好的，表示的是public文件夹的路径
+      2. <%= htmlWebpackPlugin.options.title %>是webpack配置好的，表示的是package.json中的"name": "vue_test",
+      3. <%= BASE_URL %>和<%= htmlWebpackPlugin.options.title %>是webpack配置好的，表示的是package.json中的"name": "vue_test", 
+       -->
+</head>
+
+<body>
+  <!-- 浏览器不支持js时显示的内容 -->
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+</body>
+
 </html>
