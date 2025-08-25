@@ -8,12 +8,11 @@
   <div>
     <h2>学校名称：{{ name }}</h2>
     <h2>学校地址：{{ address }}</h2>
-    <button @click="showName">点我提示学校名</button>
+    <button @click="showSchoolName">点我提示学校名</button>
   </div>
 </template>
 
 <script>
-import { myMixin } from "../mixin.js";
 export default {
   name: "SchoolInfo",
   data() {
@@ -22,6 +21,10 @@ export default {
       address: "北京-昌平",
     };
   },
-  mixins: [myMixin],
+  methods: {
+    showSchoolName() {
+      alert(this.schoolName);
+    },
+  },
 };
 </script>

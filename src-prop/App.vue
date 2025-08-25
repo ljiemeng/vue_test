@@ -1,25 +1,16 @@
 <template>
   <div id="app">
-    <h1 ref="title">title</h1>
-    <StudentInfo ref="std" />
-    <SchoolInfo />
+    <StudentInfo name="小刘" :age="18" sex="男" />
   </div>
 </template>
 
 <script>
-import SchoolInfo from "./components/SchoolInfo.vue";
 import StudentInfo from "./components/StudentInfo.vue";
 
 export default {
   name: "App",
   components: {
     StudentInfo,
-    SchoolInfo,
-  },
-
-  mounted() {
-    console.log(this.$refs.title);
-    console.log(this.$refs.std);
   },
 };
 </script>
